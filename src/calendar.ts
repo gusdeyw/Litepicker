@@ -448,6 +448,7 @@ export class Calendar extends LPCore {
       footer.innerHTML = `
       <span class="${style.previewDateRange}"></span>
       <button type="button" class="${style.buttonCancel}">${this.options.buttonText.cancel}</button>
+      <button type="button" class="${style.buttonToday}">${this.options.buttonText.today}</button>
       <button type="button" class="${style.buttonApply}">${this.options.buttonText.apply}</button>
       `;
     }

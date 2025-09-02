@@ -30,4 +30,5 @@ export const containerFooter: string;
 export const previewDateRange: string;
 export const buttonCancel: string;
 export const buttonApply: string;
+export const buttonToday: string;
 export const containerTooltip: string;

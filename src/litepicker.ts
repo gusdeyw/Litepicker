@@ -293,6 +293,27 @@ export class Litepicker extends Calendar {
 
       this.emit('button:apply', this.options.startDate, this.options.endDate);
     }
+
+    // Click on button today
+    if (target.classList.contains(style.buttonToday)) {
+      e.preventDefault();
+
+      const today = new DateTime();
+      const tomorrow = today.clone().add(1, 'day');
+
+      this.options.startDate = today;
+      this.options.endDate = tomorrow;
+
+      if (this.options.singleMode) {
+        this.setDate(today);
+      } else {
+        this.setDateRange(today, tomorrow);
+      }
+
+      this.hide();
+
+      this.emit('button:apply', this.options.startDate, this.options.endDate);
+    }
   }
 
   private showTooltip(element, text) {
